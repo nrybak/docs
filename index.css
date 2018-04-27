@@ -1,1 +1,59 @@
+body {
+  font-size: 1.5em;
+}
 
+.main {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 100vh;
+  width: 100vw;
+}
+
+.one {
+  grid-area: 1 / 1 / 4 / 4;
+  background-image: url(https://www.poezja-smaku.pl/wp-content/uploads/2014/12/gruzja-jedzenie-4.jpg);
+background-size:cover;
+}
+
+.two {
+  grid-area: 1 / 4 / 5 / 6;
+  background-image: url(https://cdn.pixabay.com/photo/2018/01/08/17/30/mushrooms-3069822__340.jpg);
+background-size:cover;
+}
+
+.three {
+  grid-area: 4 / 1 / 7 / 3;
+  background-image: url(https://thumb9.shutterstock.com/mosaic_250/564532/390942682/stock-photo-fresh-salad-with-chicken-tomatoes-and-mixed-greens-arugula-mesclun-mache-on-wooden-background-390942682.jpg);
+background-size:cover;
+}
+
+.four {
+  grid-area: 5 / 3 / 7 / 6;
+  background-image: url(https://cdn.pixabay.com/photo/2017/05/31/09/31/cake-2359702__340.jpg);
+  background-size:cover;
+}
+
+.five {
+  grid-area: 4 / 3 / 5 / 4;
+  background-image: url(https://www.stockvault.net/data/2012/07/31/133242/thumb16.jpg);
+  background-size:cover;
+}
+
+
+.main > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    display: block;
+  }
+  .main > div {
+    height: 200px;
+  }
+}
